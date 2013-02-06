@@ -3,9 +3,11 @@
 one:
   name: MyString
   age: 1
-  job: MyString
+  game: MyString
+  color: MyString
 
 two:
   name: MyString
   age: 1
-  job: MyString
+  game: MyString
+  color: MyString

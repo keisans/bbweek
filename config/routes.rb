@@ -1,7 +1,8 @@
 BbWeek::Application.routes.draw do
-  root :to => 'contacts#index'
 
-  resources :contacts
+  root :to => 'ghosts#index'
+
+  resources :ghosts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

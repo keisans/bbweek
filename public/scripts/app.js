@@ -1,4 +1,4 @@
-//Backbone Week Day 2
+//Backbone Week Day 3
 
 var Ghost = Backbone.Model.extend({
 	defaults: {
@@ -9,7 +9,7 @@ var Ghost = Backbone.Model.extend({
 	},
 
 	validate: function(attrs){
-		if(attrs.age < 0){
+		if(~~attrs.age < 0){
 			return "age cannot be less than 0"
 		}
 	},
@@ -26,7 +26,6 @@ var Ghosts = Backbone.Collection.extend({
 var GhostView = Backbone.View.extend({
 	tagName: 'li',
 	className: 'ghost',
-	idName: 'ghost-1',
 
 	template: _.template($('#ghostTemplate').html()),
 
@@ -57,10 +56,20 @@ var GhostsView = Backbone.View.extend({
 	}
 });
 
-ghosts = new Ghosts([
-	{name: "Inky", color: "Blue"}, 
-	{name: "Blinky", color: "Red"}, 
-	{name: "Pinky", color: "Pink"}, 
-	{name: "Clyde", color: "Orange"}, 
-	{name: "Sue", color: "Orange", game: "Ms. Pac-Man", age: 31}
-]);
+$(function(){
+
+	ghosts = new Ghosts([
+		{name: "Inky", color: "Blue"}, 
+		{name: "Blinky", color: "Red"}, 
+		{name: "Pinky", color: "Pink"}, 
+		{name: "Clyde", color: "Orange"}, 
+		{name: "Sue", color: "Orange", game: "Ms. Pac-Man", age: 31}
+	]);
+
+	ghostsView = new GhostsView({collection: ghosts});
+	ghostFormView = new GhostFormView({collection: ghosts});
+
+	$('#ghosts').append(ghostFormView.render().el);
+
+	$('#ghosts').append(ghostsView.render().el);
+})
