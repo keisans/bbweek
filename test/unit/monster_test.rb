@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GhostTest < ActiveSupport::TestCase
+class MonsterTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

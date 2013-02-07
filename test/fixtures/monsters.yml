@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  max_hp: 1
+  strength: 1
+  dexterity: 1
+  intelligence: 1
+  defense: 1
+
+two:
+  name: MyString
+  max_hp: 1
+  strength: 1
+  dexterity: 1
+  intelligence: 1
+  defense: 1

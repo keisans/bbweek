@@ -2,12 +2,10 @@
 
 one:
   name: MyString
-  age: 1
-  game: MyString
-  color: MyString
+  damage: MyString
+  attribute: MyString
 
 two:
   name: MyString
-  age: 1
-  game: MyString
-  color: MyString
+  damage: MyString
+  attribute: MyString
