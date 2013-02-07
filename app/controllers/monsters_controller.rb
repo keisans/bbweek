@@ -32,7 +32,7 @@ class MonstersController < ApplicationController
   end
 
   def update
-    @monster = Monster.new(params[:monster])
+    @monster = Monster.find(params[:id])
     monster_was_updated = @monster.update_attributes(params[:monster])
 
     respond_with @monster do |format|
